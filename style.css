@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --Pale-Violet: hsl(276, 100%, 81%);
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+  /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--Light-Grayish-Violet);
+  font-size: 16px;
+}
+main {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+main::before {
+  content: "";
+  position: absolute;
+  border-radius: 0px 0px 300px 300px;
+  background-image: linear-gradient(
+    60deg,
+    var(--Light-Violet),
+    var(--Light-Magenta)
+  );
+  top: 0;
+  z-index: -1;
+}
+main::after {
+  content: "";
+  position: absolute;
+  border-radius: 300px 300px 0px 0px;
+  background-color: hsl(270, 20%, 96%);
+  bottom: 0;
+  z-index: -1;
+}
+
+.phone {
+  width: 252px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 12px;
+  height: 500px;
+  position: relative;
+}
+.header {
+  background-image: linear-gradient(
+    to right,
+    var(--Light-Violet),
+    var(--Light-Magenta)
+  );
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header::before {
+  content: "";
+  width: 55%;
+  position: absolute;
+  background-color: white;
+  height: 20px;
+  left: 51%;
+  transform: translateX(-50%);
+  top: 0;
+  border-radius: 0px 0px 15px 15px;
+}
+.left {
+  display: flex;
+  gap: 7px;
+  padding: 30px 15px 10px;
+  align-items: center;
+}
+
+.header .left i {
+  align-self: center;
+  font-size: 15px;
+}
+.header .left img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.header .left p {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+}
+.header .left p span {
+  color: hsl(0deg 0% 74.95%);
+  font-size: 8px;
+}
+.header .right i {
+  padding-right: 13px;
+  font-size: 12px;
+  position: relative;
+  top: 10px;
+}
+.messages {
+  background-color: var(--Light-Grayish-Violet);
+  display: grid;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 0px 0px 20px 20px;
+}
+.messages .images img {
+  width: 40px;
+  border-radius: 10px;
+}
+.messages p,
+.messages .images {
+  width: fit-content;
+  padding: 8px;
+  font-size: 8px;
+}
+.messages .me {
+  justify-self: flex-start;
+  background-color: hsl(277, 33%, 92%);
+  color: var(--Light-Magenta);
+  border-radius: 15px 15px 14px 5px;
+  width: 130px;
+}
+.messages .images {
+  justify-self: flex-end;
+  display: flex;
+  gap: 8px;
+  position: relative;
+  bottom: 4px;
+  left: 16px;
+}
+.messages .you {
+  justify-self: flex-end;
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px 15px 5px 15px;
+  box-shadow: 0 5px 20px 0 #0000000d;
+}
+.messages .offer {
+  justify-self: flex-start;
+  background-image: linear-gradient(
+    to left,
+    var(--Light-Violet),
+    var(--Light-Magenta)
+  );
+  color: #fff;
+  border-radius: 10px 10px 10px 5px;
+  width: 161px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 8px;
+  position: relative;
+  margin-top: 5px;
+  height: 31px;
+}
+.messages .me + .offer {
+  margin-top: 17px;
+}
+.messages .offer::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  left: 10px;
+}
+.messages .offer span {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 0 6px;
+}
+.box-type {
+  border-radius: 50px;
+  background-color: white;
+  color: #dedfdf;
+  padding: 8px 0px 8px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+}
+.box-type i {
+  background-color: #3b2453;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+.text {
+  display: grid;
+  position: relative;
+  gap: 24px;
+}
+.text h1 {
+  font-weight: 700;
+  color: var(--Very-Dark-Desaturated-Violet);
+  font-size: 39px;
+}
+.text p {
+  color: hsl(255deg 2.53% 69.02%);
+  line-height: 1.8;
+}
+@media (min-width: 1001px) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+  }
+  main::before {
+    height: 88%;
+    left: -83px;
+    width: 34.723%;
+  }
+  body::after {
+    height: 88%;
+    right: -176px;
+    width: 34.723%;
+  }
+  .text {
+    left: 100px;
+    width: 450px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  main::before {
+    width: 500px;
+    height: 56%;
+    left: -315px;
+  }
+  main::after {
+    width: 500px;
+    height: 56%;
+    right: -315px;
+  }
+  .text {
+    left: 0px;
+    text-align: center;
+    width: 310px;
+    top: 15px;
+  }
+  .phone {
+    top: 15px;
+  }
+}
+@media (min-height: 320px) and (max-height: 824px) {
+  .text p {
+    height: 220px;
+  }
+}
